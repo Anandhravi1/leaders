@@ -1,0 +1,213 @@
+
+.leadership .item-info {
+    position: relative;   
+    cursor: pointer; 
+    
+}
+.leadership strong {
+    color:#000;
+}
+.leadership img {
+    transition:opacity 0.25s ease;    
+}
+.leadership .img-caption {
+    text-align: center;
+    opacity: 0;
+}
+.leadership .item-info:hover img {
+        opacity:0.3;
+}
+.leadership .item-info:hover .img-caption {
+    opacity:1;
+}
+.leadership .d-flex {
+    display: flex;
+}
+.leadership h3 {
+    font-size:22px;
+    margin-bottom: 5px;
+}
+.leadership .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.leadership .align-items-center { 
+    align-items: center;
+}
+.leadership .justify-content-center { 
+    justify-content: center;
+}
+.leadership .author-content {
+    position:absolute;
+    z-index: 1;
+    display: none;
+    min-width: 430px;
+    padding:15px;
+    background:#f4f4f4; 
+    width:50%;   
+}
+.leadership .auc .author-content {
+    display:block;
+}
+.leader.active::before {
+    border: 20px solid;
+    border-top-color: transparent !important;
+    border-left-color: transparent !important;
+    border-bottom-color: transparent !important;
+    position: absolute;
+    bottom: -20px;
+    width: 0;
+    height: 0;
+    z-index: 99;
+    margin: 0 auto;
+    text-align: center;
+    right: -20px;
+    top: 100px;
+    transform: translateX(-50%);
+    border-color: #f4f4f4;
+    content: "";
+}
+.leader.leader-13.active::before {
+    display:none;
+}
+.leader.leader-3.active::before,.leader.leader-4.active::before,
+.leader.leader-7.active::before,.leader.leader-8.active::before,
+.leader.leader-11.active::before,.leader.leader-12.active::before,
+.leader.leader-15.active::before,.leader.leader-16.active::before {
+    border: 20px solid #f4f4f4 !important;
+    border-top-color: transparent !important;
+    border-right-color: transparent !important;
+    border-bottom-color: transparent !important;
+    position: absolute;
+    bottom: -20px;
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    text-align: center;
+    left:-80%;
+    z-index: 999;
+    top: 100px;
+    transform: translateX(-50%);
+    border-color: #f4f4f4;
+    content: "";
+}
+.sub-content h3 {
+    font-size:20px;
+    font-weight: bold;
+    padding-bottom:10px;
+    display:inline-block;
+    border-bottom:2px solid #000;
+}
+.sub-content p {
+    font-size:16px;
+}
+.sub-content {
+    margin-bottom:30px;
+}
+.leadership .close {
+    display: none;
+}
+@media only screen and ( max-width: 768px) {
+    .leadership .author-content  {
+        min-width: 350px;;
+    }
+    .leadership .sub-content {
+        margin-bottom:20px;
+    }
+    .leadership .author-content {
+        position:absolute;
+        z-index: 1;
+        display: none;
+        min-width: 430px;
+        padding:15px;
+        background:#f4f4f4; 
+        width:75%;   
+    }
+}
+
+@media only screen and ( max-width: 567px) {
+    .leadership h3 {
+        font-size:16px;        
+    }
+    .leadership strong {
+        font-size:10px;
+    }  
+    .leader.active::before {
+        display:none;
+    }
+    .leadership .overlay {
+        position: static;
+    }
+    .leadership .img-caption {
+        opacity:1;
+    }
+     .leadership .author-content
+     {                
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        bottom: 10px;        
+        overflow-x: hidden;
+        min-width: auto;
+        width:auto;
+        padding-top:25px;        
+    }
+    .leadership .close {
+        display:block;
+        color:#000;
+        position: fixed;
+        right: 20px;
+        width: 90%;
+        text-align: right;
+        top: 15px;       
+    }
+    .leadership .scroll {
+       overflow-y: scroll;
+       height: 100%;
+    }
+    .leadership .img-caption {
+        line-height: 1;     
+    }
+    .leadership .img-caption h3 {
+        font-size:14px;
+        margin-bottom:0;
+    }
+    .of-hid {
+        overflow: hidden;
+    }    
+}
+.px-50 {
+    padding-top:50px;
+    padding-bottom:50px;
+}
+.top {
+    top: 0;
+}
+.top-25 {
+    top:25%;
+}
+.bottom {
+    bottom: 0;
+}
+.left {
+    left: 0;
+}
+.left-25 {
+    left: 25%;
+}
+.left-50 {
+    left:50%;
+}
+.right {
+    right: 0;
+}
+.right-25 {
+    right: 25%;
+}
+.right-50 {
+    right:50%;
+}

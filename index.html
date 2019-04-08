@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link  rel="stylesheet" type="text/css"  media="all" href="https://www.usesi.com/static/version1554272696/frontend/Usesi/store/en_US/css/styles-m.min.css" />
+    <link  rel="stylesheet" type="text/css"  media="all" href="https://www.usesi.com/static/version1554272696/frontend/Usesi/store/en_US/css/plugin.min.css" />
+    <link  rel="stylesheet" type="text/css"  media="all" href="https://www.usesi.com/static/version1554272696/frontend/Usesi/store/en_US/css/layout-custom.min.css" />    
+    <title>Leadership</title>    
+    
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <style>
+
+.leadership .item-info {
+    position: relative;   
+    cursor: pointer; 
+    
+}
+.leadership strong {
+    color:#000;
+}
+.leadership img {
+    transition:opacity 0.25s ease;    
+}
+.leadership .img-caption {
+    text-align: center;
+    opacity: 0;
+}
+.leadership .item-info:hover img {
+        opacity:0.3;
+}
+.leadership .item-info:hover .img-caption {
+    opacity:1;
+}
+.leadership .d-flex {
+    display: flex;
+}
+.leadership h3 {
+    font-size:22px;
+    margin-bottom: 5px;
+}
+.leadership .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.leadership .align-items-center { 
+    align-items: center;
+}
+.leadership .justify-content-center { 
+    justify-content: center;
+}
+.leadership .author-content {
+    position:absolute;
+    z-index: 1;
+    display: none;
+    min-width: 430px;
+    padding:15px;
+    background:#f4f4f4; 
+    border-radius: 10px;
+    width:50%;   
+}
+.leadership .auc .author-content {
+    display:block;
+}
+.leader.active::before {
+    border: 20px solid;
+    border-top-color: transparent !important;
+    border-left-color: transparent !important;
+    border-bottom-color: transparent !important;
+    position: absolute;
+    bottom: -20px;
+    width: 0;
+    height: 0;
+    z-index: 99;
+    margin: 0 auto;
+    text-align: center;
+    right: -20px;
+    top: 100px;
+    transform: translateX(-50%);
+    border-color: #f4f4f4;
+    content: "";
+}
+.leader.leader-13.active::before {
+    display:none;
+}
+.leader.leader-3.active::before,.leader.leader-4.active::before,
+.leader.leader-7.active::before,.leader.leader-8.active::before,
+.leader.leader-11.active::before,.leader.leader-12.active::before,
+.leader.leader-15.active::before,.leader.leader-16.active::before {
+    border: 20px solid #f4f4f4 !important;
+    border-top-color: transparent !important;
+    border-right-color: transparent !important;
+    border-bottom-color: transparent !important;
+    position: absolute;
+    bottom: -20px;
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    text-align: center;
+    left:-80%;
+    z-index: 999;
+    top: 100px;
+    transform: translateX(-50%);
+    border-color: #f4f4f4;
+    content: "";
+}
+.sub-content h3 {
+    font-size:20px;
+    font-weight: bold;
+    padding-bottom:10px;
+    display:inline-block;
+    border-bottom:2px solid #000;
+}
+.sub-content p {
+    font-size:16px;
+}
+.sub-content {
+    margin-bottom:30px;
+}
+.leadership .close {
+    display: none;
+}
+@media only screen and ( max-width: 768px) {
+    .leadership .author-content  {
+        min-width: 350px;
+    }
+    .leadership .sub-content {
+        margin-bottom:20px;
+    }
+    .leadership .author-content { 
+       width:50%;   
+}
+}
+@media only screen and ( max-width: 768px) and ( min-width:567px) {
+  .leadership .author-content  {
+       height:80%;
+       overflow-y:scroll;       
+    }
+}
+@media only screen and ( max-width: 567px) {
+    .leadership h3 {
+        font-size:16px;        
+    }
+    .leadership strong {
+        font-size:10px;
+    }  
+    .leader.active::before {
+        display:none;
+    }
+    .leadership .overlay {
+        position: static;
+    }
+    .leadership .img-caption {
+        opacity:1;
+    }
+     .leadership .author-content
+     {                
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        bottom: 10px;        
+        overflow-x: hidden;
+        min-width: auto;
+        width:auto;
+        padding-top:25px;        
+        z-index: 999;
+    }
+    .leadership .close {
+        display:block;
+        color:#000;
+        position: fixed;
+        right: 20px;
+        width: 90%;
+        text-align: right;
+        top: 15px;       
+    }
+    .leadership .scroll {
+       overflow-y: scroll;
+       height: 100%;
+    }
+    .leadership .img-caption {
+        line-height: 1;     
+    }
+    .leadership .img-caption h3 {
+        font-size:14px;
+        margin-bottom:0;
+    }
+    .of-hid {
+        overflow: hidden;
+    }    
+}
+.px-50 {
+    padding-top:50px;
+    padding-bottom:50px;
+}
+.top {
+    top: 0;
+}
+.top-25 {
+    top:25%;
+}
+.bottom {
+    bottom: 0;
+}
+.left {
+    left: 0;
+}
+.left-25 {
+    left: 25%;
+}
+.left-50 {
+    left:50%;
+}
+.right {
+    right: 0;
+}
+.right-25 {
+    right: 25%;
+}
+.right-50 {
+    right:50%;
+}
+
+    </style>
+  </head>
+  <body class="container">
+      <div class="px-50 leadership clearfix pos-rel">
+          <div class=" leader leader-1 col-md-3 col-sm-3 col-xs-6 mb-30">
+          <div class="item-info">
+          <div class="item" data-lead="1"><img src="https://assets.usesi.com/revslider/usesi_leadership/Randy-Eddy.jpg" alt="">
+          <div class="overlay d-flex justify-content-center align-items-center">
+          <div class="img-caption">
+          <h3>Randy Eddy</h3>
+          <strong>President and CEO</strong></div>
+          </div>
+          </div>
+          </div>
+          </div>
+          <div class="author-content top left-25" id="lead1"><span class="close">x</span>
+            <div class="scroll">
+            <div class="sub-content">
+            <h3 class="text-uppercase">what to you do?</h3>
+            <p>We are working to build the best electrical distributor in our space, so I have a lot to do to build and support our teams toward that goal.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">How do you apply one of our core values (excellence, employee fulfillment, shared vision, integrity) to your work?</h3>
+            <p>When it comes to matters of ethics and integrity, I do the right things first and ask questions later. That way I rarely have to deal with issues of ethics and integrity.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">who are you outside of work?</h3>
+            <p>I am a Husband and father of 2 sons and an avid bike rider.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your educational background?</h3>
+            <p>I earned my BS in Business Administration from University of Southwestern Louisiana</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what are your hobbies?</h3>
+            <p>My hobbies are riding bikes and working.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your industry experience?</h3>
+            <p>I have 35 years in the electrical distribution industry. Started in the warehouse and worked up from there.</p>
+            </div>
+            </div>
+          </div>
+          <div class=" leader leader-2 col-md-3 col-sm-3 col-xs-6 mb-30">
+          <div class="item-info">
+          <div class="item" data-lead="2"><img src="https://assets.usesi.com/revslider/usesi_leadership/Wes-Broderick.jpg" alt="revslider">
+          <div class="overlay d-flex justify-content-center align-items-center">
+          <div class="img-caption">
+          <h3>Wesley Broderick</h3>
+          <strong>Chief Financial Officer</strong></div>
+          </div>
+          </div>         
+          </div>
+          </div>
+          <div class="author-content top left-50" id="lead2" ><span class="close">x</span>
+            <div class="scroll">
+            <div class="sub-content">
+            <h3 class="text-uppercase">what to you do?</h3>
+            <p>While overseeing finance and human resource functions, I focus on partnering with our leaders to continuously improve performance of the organization.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">how do you apply one of our core values (excellence, employee fulfillment, shared vision, integrity) to your work?</h3>
+            <p>Integrity. Always doing the right thing regardless of the consequences is fundamental to success.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your educational background?</h3>
+            <p>I graduated from Bryant University with a bachelors degree in Business Administration. I'm also a CPA</p>
+            </div>
+            </div>
+          </div>
+          <div class=" leader leader-3 col-md-3 col-sm-3 col-xs-6 mb-30">
+          <div class="item-info">
+          <div class="item" data-lead="3"><img src="https://assets.usesi.com/revslider/usesi_leadership/Alice-Brown.jpg" alt="">
+          <div class="overlay d-flex justify-content-center align-items-center">
+          <div class="img-caption">
+          <h3>Alice Brown</h3>
+          <strong>VP of Information Technologies</strong></div>
+          </div>
+          </div>        
+          </div>
+          </div>
+          <div class="author-content top right-50" id="lead3" ><span class="close">x</span>
+            <div class="scroll">
+            <div class="sub-content">
+            <h3 class="text-uppercase">what to you do?</h3>
+            <p>Infrastructure, Networking, Training, Audit, and the Eclipse departments report to me. I am passionate about building great teams to provide best in class service for our customers.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">how do you apply one of our core values (excellence, employee fulfillment, shared vision, integrity) to your work?</h3>
+            <p>Employee Fulfillment. I have built a team of winners that support other team members and share their knowledge.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">who are you outside of work?</h3>
+            <p>I enjoy traveling and spending time with my husband, daughters and 2 grandchildren.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your educational background?</h3>
+            <p>I graduated from Hartford State Technical Colleges with honors and is a certified project manager.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your industry experience?</h3>
+            <p>25 years of experience in Information Technology specializing in strategic planning, project management, and process improvement.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">childhood nickname?</h3>
+            <p>Pickles</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what are your hobbies?</h3>
+            <p>Gardening, Camping, going to the beach.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">Favorite Food?</h3>
+            <p>Lasagna</p>
+            </div>
+            </div>
+            </div>
+          <div class=" leader leader-4 col-md-3 col-sm-3 col-xs-6 mb-30">
+          <div class="item-info">
+          <div class="item" data-lead="4"><img src="https://assets.usesi.com/revslider/usesi_leadership/Katina-Mataras.jpg" alt="">
+          <div class="overlay d-flex justify-content-center align-items-center">
+          <div class="img-caption">
+          <h3>Katina Mataras</h3>
+          <strong>VP of Procurement Technologies</strong></div>
+          </div>
+          </div>       
+          </div>
+          </div>
+          <div class="author-content top right-25"  id="lead4" ><span class="close">x</span>
+            <div class="scroll">
+            <div class="sub-content">
+            <h3 class="text-uppercase">what to you do?</h3>
+            <p>I work with my "customers" - the purchasing agents and the branch managers - to ensure we have the right items in the right quantities at the right time for all our branches.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">how do you apply one of our core values (excellence, employee fulfillment, shared vision, integrity) to your work?</h3>
+            <p>The core values are all important, but integrity is the basis for anyone's success. You can always trust me to be honest with you and to do the right thing for you.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">who are you outside of work?</h3>
+            <p>I am a doting grandmother, a loving wife, mother, sister and daughter, and a dedicated friend.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your educational background?</h3>
+            <p>University of Pittsburgh, B.S. in Biology</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your industry experience?</h3>
+            <p>A 55 year veteran of the wholesaling industry, I learned from the founders of inventory management theories for hard goods distribution.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">childhood nickname?</h3>
+            <p>Tink</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what are your hobbies?</h3>
+            <p>Reading and sailing.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">Favorite Movie?</h3>
+            <p>My Big Fat Greek Wedding - the story of my life!</p>
+            </div>
+            </div>
+            </div>
+          <div class=" leader  leader-5 col-md-3 col-sm-3 col-xs-6 mb-30">
+          <div class="item-info">
+          <div class="item" data-lead="5"><img src="https://assets.usesi.com/revslider/usesi_leadership/Mike-Mayer.jpg" alt="">
+          <div class="overlay d-flex justify-content-center align-items-center">
+          <div class="img-caption">
+          <h3>Mike Mayer</h3>
+          <strong>VP of E-Commerce</strong></div>
+          </div>
+          </div>        
+          </div>
+          </div>
+          <div class="author-content top-25 left-25" id="lead5"><span class="close">x</span>
+            <div class="scroll">
+            <div class="sub-content">
+            <h3 class="text-uppercase">what to you do?</h3>
+            <p>In my spare time, I champion a highly customized e-commerce platform, directs digital marketing and drive customer integrations via web, apps, e-pro and automation.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">how do you apply one of our core values (excellence, employee fulfillment, shared vision, integrity) to your work?</h3>
+            <p>Shared Vision. My passion is to chart a course and grow our organization to new levels utilizing electronic solutions.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">who are you outside of work?</h3>
+            <p>I am a loving father, devoted husband, avid traveler and boxer in training.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your educational background?</h3>
+            <p>I graduated with honors in achieving a Masters of Information Science in Internet and Network Services from Indiana University Bloomington. I'm a certified PMP. I also served a United States Congressional Internship in Washington, D.C.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">childhood nickname?</h3>
+            <p>Mayer</p>
+            </div>
+            </div>
+            </div>
+          <div class=" leader leader-6 col-md-3 col-sm-3 col-xs-6 mb-30">
+          <div class="item-info">
+          <div class="item" data-lead="6"><img src="https://assets.usesi.com/revslider/usesi_leadership/Chris-O.jpg" alt="">
+          <div class="overlay d-flex justify-content-center align-items-center">
+          <div class="img-caption">
+          <h3>Christopher O'Halloran</h3>
+          <strong>Director of Pricing Strategy</strong></div>
+          </div>
+          </div>        
+          </div>
+          </div>
+          <div class="author-content top-25 left-50" id="lead6"><span class="close">x</span>
+            <div class="scroll">
+            <div class="sub-content">
+            <h3 class="text-uppercase">what to you do?</h3>
+            <p>I lead the development, evaluation and execution of USESI companies pricing strategies and the optimization of related policies and procedures.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">how do you apply one of our core values (excellence, employee fulfillment, shared vision, integrity) to your work?</h3>
+            <p>Integrity. If I say something will get done I make sure that it happens, no matter where the request is coming from.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your educational background?</h3>
+            <p>Chris graduated from St. Patrick High.</p>
+            </div>
+            </div>
+            </div>
+          <div class=" leader leader-7 col-md-3 col-sm-3 col-xs-6 mb-30">
+          <div class="item-info">
+          <div class="item" data-lead="7"><img src="https://assets.usesi.com/revslider/usesi_leadership/Ian-Thomas.jpg" alt="">
+          <div class="overlay d-flex justify-content-center align-items-center">
+          <div class="img-caption">
+          <h3>Ian Thomas</h3>
+          <strong>VP of CDC Operations</strong></div>
+          </div>
+          </div>         
+          </div>
+          </div>
+          <div class="author-content top-25 right-50" id="lead7"><span class="close">x</span>
+            <div class="scroll">
+            <div class="sub-content">
+            <h3 class="text-uppercase">what to you do?</h3>
+            <p>When I'm not chasing my tail...I try to make logistics happen in real life!</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">how do you apply one of our core values (excellence, employee fulfillment, shared vision, integrity) to your work?</h3>
+            <p>Safety. We strive to be a great place to work and show our employees that we care about them and their well-being, by providing them with a safe place to work, and allowing them to be owners in their environment.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">who are you outside of work?</h3>
+            <p>Gym Rat, Gamer, and every leap year...Batman.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your educational background?</h3>
+            <p>I have a degree in Exercise Science and a degree in Business Management. Currently working on my Graduate Degree in Supply Chain and Logistics.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your industry experience?</h3>
+            <p>7 years working for UPS and 4 years working for Amazon. In total I have ~15 years in Supply Chain and Logistics.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">childhood nickname?</h3>
+            <p>Ian St. Ian</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what are your hobbies?</h3>
+            <p>Training for Bodybuilding and Gaming.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">Favorite Food?</h3>
+            <p>Thanksgiving...All of it!</p>
+            </div>
+            </div>
+            </div>
+          <div class=" leader leader-8 col-md-3 col-sm-3 col-xs-6 mb-30">
+          <div class="item-info">
+          <div class="item" data-lead="8"><img src="https://assets.usesi.com/revslider/usesi_leadership/Dan-Willison.jpg" alt="">
+          <div class="overlay d-flex justify-content-center align-items-center">
+          <div class="img-caption">
+          <h3>Dan Willison</h3>
+          <strong>VP of Operations &amp; Vendor Relations</strong></div>
+          </div>
+          </div>       
+          </div>
+          </div>
+          <div class="author-content top-25 right-25" id="lead8"><span class="close">x</span>
+            <div class="scroll">
+            <div class="sub-content">
+            <h3 class="text-uppercase">what to you do?</h3>
+            <p>I communicate with Vendors and interacts with Purchasing.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">how do you apply one of our core values (excellence, employee fulfillment, shared vision, integrity) to your work?</h3>
+            <p>I work on the relationships with vendors and management with integrity.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">who are you outside of work?</h3>
+            <p>I am a loving husband and father.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your educational background?</h3>
+            <p>I am graduate from Groveport High School.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your industry experience?</h3>
+            <p>I have 44 years experience in the electrical distribution industry.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">childhood nickname?</h3>
+            <p>Willy</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what are your hobbies?</h3>
+            <p>I love Music and Sports.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">Favorite Food?</h3>
+            <p>I love Pizza.</p>
+            </div>
+            </div>
+            </div>
+          <div class=" leader leader-9 col-md-3 col-sm-3 col-xs-6 mb-30">
+          <div class="item-info">
+          <div class="item" data-lead="9"><img src="https://assets.usesi.com/revslider/usesi_leadership/Steve-Bryson.jpg" alt="">
+          <div class="overlay d-flex justify-content-center align-items-center">
+          <div class="img-caption">
+          <h3>Steve Bryson</h3>
+          <strong>President of Yale Electric Supply</strong></div>
+          </div>
+          </div>      
+          </div>
+          </div>
+          <div class="author-content bottom left-25" id="lead9"><span class="close">x</span>
+            <div class="scroll">
+            <div class="sub-content">
+            <h3 class="text-uppercase">what to you do?</h3>
+            <p>As a Region President, I am highly focused on developing strategies and initiatives to deliver a best-in-class experience for our customers, vendors and employees on a daily basis.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">how do you apply one of our core values (excellence, employee fulfillment, shared vision, integrity) to your work?</h3>
+            <p>Excellence. Take every challenge as an opportunity to exceed customer expectations.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">who are you outside of work?</h3>
+            <p>Steve is a devoted husband, father of two sons, and avid golfer.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your educational background?</h3>
+            <p>I am a Graduate of Delcastle Technical High School with honors in Industrial Electricity</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your industry experience?</h3>
+            <p>I've spent over 25 years in the electrical industry, starting in the field as a commercial electrician. I moved into electrical distribution where I worked my way through all phases of our business - driver, warehouse associate, counter/inside sales, outside sales, district manager and region president.</p>
+            </div>
+            </div>
+            </div>
+          <div class=" leader  leader-10 col-md-3 col-sm-3 col-xs-6 mb-30">
+          <div class="item-info">
+          <div class="item" data-lead="10"><img src="https://assets.usesi.com/revslider/usesi_leadership/Rich-Cannata.jpg" alt="">
+          <div class="overlay d-flex justify-content-center align-items-center">
+          <div class="img-caption">
+          <h3>Rich Cannata</h3>
+          <strong>VP of U.S. Renewable Solutions</strong></div>
+          </div>
+          </div>          
+          </div>
+          </div>
+          <div class="author-content bottom left-50" id="lead10"><span class="close">x</span>
+            <div class="scroll">
+            <div class="sub-content">
+            <h3 class="text-uppercase">what to you do?</h3>
+            <p>I am the leader of the solar division of US Electrical, tasked with growing solar sales, maintaining and balancing solar inventory, and working with my team to be the premier solar distributor in the market.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">how do you apply one of our core values (excellence, employee fulfillment, shared vision, integrity) to your work?</h3>
+            <p>Integrity. I continue to achieve growth in the solar market as a trusted advisor to my customer base by honoring small and large business equally, and by fostering a team rooted in honesty and trust.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">who are you outside of work?</h3>
+            <p>I am a dedicated father, loving husband, cheese enthusiast, and aspiring gardener.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your educational background?</h3>
+            <p>I bring to the position a successful track record of more than 10 years in electrical/solar positions. I earned a Bachelors of Science in Business Administration from Bryant University, with an emphasis on management and sales.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your industry experience?</h3>
+            <p>I spent 5 years learning the electrical business at Graybar Electric, and the last 7 Years at EW/US Electrical spearheading and now heading up the Solar division.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what are your hobbies?</h3>
+            <p>Golfing, gardening, cooking, and woodworking.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">Favorite Movie?</h3>
+            <p>Bohemian Rhapsody</p>
+            </div>
+            </div>
+            </div>
+          <div class=" leader leader-11 col-md-3 col-sm-3 col-xs-6 mb-30">
+          <div class="item-info">
+          <div class="item" data-lead="11"><img src="https://assets.usesi.com/revslider/usesi_leadership/Rodger-Cherry.jpg" alt="">
+          <div class="overlay d-flex justify-content-center align-items-center">
+          <div class="img-caption">
+          <h3>Rodger Cherry</h3>
+          <strong>President of Wiedenbach-Brown</strong></div>
+          </div>
+          </div>        
+          </div>
+          </div>
+          <div class="author-content bottom right-50" id="lead11"><span class="close">x</span>
+            <div class="scroll">
+            <div class="sub-content">
+            <h3 class="text-uppercase">what to you do?</h3>
+            <p>As President of Wiedenbach-Brown, he guides a dedicated group of people who understand the value of long-term customer relationships.</p>
+            <p>Under my leadership, WB has diversified its business into four core groups: Retail National Accounts, Commercial Construction, MRO, and Electrical Services.</p>
+            <p>Prior to joining WB, I was President of New York City’s largest lighting distributor. In addition, I held positions as Senior Vice President of Neoray Lighting, a linear fluorescent lighting manufacturer, and Vice President of International Lights, a lighting representative agency in New York City.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">who are you outside of work?</h3>
+            <p>I live in New York with my wife and two sons. I enjoy skiing, golf, and spending time with family and friends.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your educational background?</h3>
+            <p>I am a graduate of Syracuse University.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your industry experience?</h3>
+            <p>I have more than 30 years of experience in lighting distribution, manufacturing, and representation.</p>
+            </div>
+            </div>
+            </div>
+          <div class=" leader leader-12 col-md-3 col-sm-3 col-xs-6 mb-30">
+          <div class="item-info">
+          <div class="item" data-lead="12"><img src="https://assets.usesi.com/revslider/usesi_leadership/Charlie-Colella.jpg" alt="">
+          <div class="overlay d-flex justify-content-center align-items-center">
+          <div class="img-caption">
+          <h3>Charlie V.Colella</h3>
+          <strong>President of Duplex &amp; Monarch Electric</strong></div>
+          </div>
+          </div>       
+          </div>
+          </div>
+          <div class="author-content bottom right-25" id="lead12"><span class="close">x</span>
+            <div class="scroll">
+            <div class="sub-content">
+            <h3 class="text-uppercase">what to you do?</h3>
+            <p>I am a Business Leader for USESI's brands in Metro New York.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">how do you apply one of our core values (excellence, employee fulfillment, shared vision, integrity) to your work?</h3>
+            <p>I Build great teams and enable their success.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">who are you outside of work?</h3>
+            <p>Husband, father, brother and son.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your educational background?</h3>
+            <p>Electrical Engineer</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">Favorite Movie?</h3>
+            <p>Moonstruck</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">childhood nickname?</h3>
+            <p>CC</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what are your hobbies?</h3>
+            <p>I love music and sports.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">Favorite Food?</h3>
+            <p>Full-flavor ethnic foods</p>
+            </div>
+            </div>
+            </div>
+          <div class=" leader  leader-13 col-md-3 col-sm-3 col-xs-6 mb-30">
+          <div class="item-info">
+          <div class="item"><img src="https://assets.usesi.com/revslider/usesi_leadership/Ted-Dlugolecki.jpg" alt="">
+          <div class="overlay d-flex justify-content-center align-items-center">
+          <div class="img-caption">
+          <h3>Ted Dlugolecki</h3>
+          <strong>President of Standard Electric</strong></div>
+          </div>
+          </div>
+          </div>
+          </div>
+          <div class=" leader leader-14 col-md-3 col-sm-3 col-xs-6 mb-30">
+          <div class="item-info">
+          <div class="item" data-lead="14"><img src="https://assets.usesi.com/revslider/usesi_leadership/Jim-Facciolo.jpg" alt="">
+          <div class="overlay d-flex justify-content-center align-items-center">
+          <div class="img-caption">
+          <h3>Jim Facciolo</h3>
+          <strong>President of Maurice Electrical Supply</strong></div>
+          </div>
+          </div>         
+          </div>
+          </div>
+          <div class="author-content bottom left-50" id="lead14"><span class="close">x</span>
+            <div class="scroll">
+            <div class="sub-content">
+            <h3 class="text-uppercase">what to you do?</h3>
+            <p>I focuses on continuing to build upon strong industry relationships and understands the importance of hiring, training and developing talented employees, empowering them to make sound business decisions to service customers and to grow profitably.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">how do you apply one of our core values (excellence, employee fulfillment, shared vision, integrity) to your work?</h3>
+            <p>Excellence. I am constantly looking for ways to help customers achieve their goals through innovative solutions.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">who are you outside of work?</h3>
+            <p>I am a devoted husband and father. I like to golf, bass fish and slay the guitar.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your educational background?</h3>
+            <p>I have a Bachelor of Arts degree in Business Management and Economics from North Carolina State University.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">Favorite Movie?</h3>
+            <p>Pulp Fiction</p>
+            </div>
+            </div>
+            </div>
+          <div class=" leader leader-15 col-md-3 col-sm-3 col-xs-6 mb-30">
+          <div class="item-info">
+          <div class="item" data-lead="15"><img src="https://assets.usesi.com/revslider/usesi_leadership/Steven-Valcourt.jpg" alt="">
+          <div class="overlay d-flex justify-content-center align-items-center">
+          <div class="img-caption">
+          <h3>Steven R.Valcourt</h3>
+          <strong>President of EW New England</strong></div>
+          </div>
+          </div>        
+          </div>
+          </div>
+          <div class="author-content bottom right-50" id="lead15"><span class="close">x</span>
+            <div class="scroll">
+            <div class="sub-content">
+            <h3 class="text-uppercase">what to you do?</h3>
+            <p>I oversee sales and operations of 14 wonderful locations in lovely New England.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">how do you apply one of our core values (excellence, employee fulfillment, shared vision, integrity) to your work?</h3>
+            <p>Integrity. Never "PROMISE" anything unless you're certain you can deliver!</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">who are you outside of work?</h3>
+            <p>Quiet, reserved but physically active and extremely competitive.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your educational background?</h3>
+            <p>I attended the University Of Massachusetts.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your industry experience?</h3>
+            <p>35 years in the electrical industry.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what are your hobbies?</h3>
+            <p>All sports and trading options.</p>
+            </div>
+            </div>
+            </div>
+          <div class=" leader leader-16 col-md-3 col-sm-3 col-xs-6 mb-30">
+          <div class="item-info">
+          <div class="item" data-lead="16"><img src="https://assets.usesi.com/revslider/usesi_leadership/Stephen-Wyckoff.jpg" alt="">
+          <div class="overlay d-flex justify-content-center align-items-center">
+          <div class="img-caption">
+          <h3>Stephen Wyckoff</h3>
+          <strong>President of Lade-Danlar</strong></div>
+          </div>
+          </div>          
+          </div>
+          </div>
+          <div class="author-content bottom right-25" id="lead16"><span class="close">x</span>
+            <div class="scroll">
+            <div class="sub-content">
+            <h3 class="text-uppercase">what to you do?</h3>
+            <p>I set the tone for pace and direction of the business, empowering my team at Lade-Danlar to be the best.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">how do you apply one of our core values (excellence, employee fulfillment, shared vision, integrity) to your work?</h3>
+            <p>There will never be a shortage for the need to 'deliver above and beyond expectations'. I am setting the groundwork to deliver the best experience to customers and employees, above and beyond expectations.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">who are you outside of work?</h3>
+            <p>I am a father to his two wonderful children and husband to a beautiful wife. Also, an adventure seeker; not one to shy away from doing really difficult ultra-marathons and mountain bike races.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your educational background?</h3>
+            <p>I studied at the University of Central Florida, graduating with a bachelors degree in Business Administration.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">what is your industry experience?</h3>
+            <p>I have 10 years experience managing and selling in the light industrial and electrical industries.</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">Favorite Movie?</h3>
+            <p>Top Gun</p>
+            </div>
+            <div class="sub-content">
+            <h3 class="text-uppercase">Favorite Food?</h3>
+            <p>Buffalo Wings</p>
+            </div>
+            </div>
+            </div>
+          </div>
+    <script>
+        $(document).ready(function(){
+            $('.item-info .item').click(function(){
+                
+                // $('.leadership').addClass('of-hid');
+                $(this).closest('.leader').toggleClass('active');
+                $(this).closest('.leader').siblings('.leader').removeClass('active');
+          var lead = '#lead' + $(this).data('lead');
+          console.log(lead);
+          $('.author-content').not(lead).hide();
+          $(lead).toggle();
+            });
+            $('.close').click(function(){
+                $('.item-info').removeClass('auc');
+                $('.leadership').removeClass('of-hid');
+                $(this).parent('.author-content').css("display","none");                
+            });
+        });     
+    </script>
+</body>
+</html>
